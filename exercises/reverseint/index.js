@@ -17,3 +17,15 @@ function reverseInt(n) {
 }
 
 module.exports = reverseInt;
+
+// This one uses an if statement
+// function reverseInt(n) {
+  // convert n into a string, array, and reverse
+    // let reverseNum = parseInt(n.toString().split('').reverse().join(''))
+
+  // handle negative numbers
+//   if (x < 0) {
+//     return reverseNum * -1
+//   }
+//   return reverseNum
+// }

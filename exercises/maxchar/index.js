@@ -15,7 +15,7 @@ function maxChar(str) {
   // create a variable that keeps track of which character appears most. Set it to an empty string to start.
   let maxChar = ''
 
-// iterate through each character in the string, make it a key and implement the value each time it appears
+// iterate through each character in the string array, make it a key and implement the value each time it appears. for...of is only used for strings and arrays
   for(let char of str){
     // if the character already exists, add one to the value
     if (charsObj[char]) {
@@ -25,8 +25,19 @@ function maxChar(str) {
     } else {
       charsObj[char] = 1
     }
-    console.log(charsObj);
- }
+  }
+
+    //iterate over our object of key/values using another for loop, this time, a for...in loop. For...in can only be used with objects. For...of is for strings/arrays. Subtle difference!
+    for (let char in charsObj) {
+      // if the specific character has a number greater than max, update the value of both max and maxChar.
+      if (charsObj[char] > max) {
+        max = charsObj[char]
+        maxChar = char
+      }
+    }
+
+    return maxChar
+
 }
 
 module.exports = maxChar;

@@ -8,6 +8,11 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+function chunk(array, size) {
+  // needs a loop to advance through array
+  // slice the array from 0 to size
+  // return an array of arrays
+
+}
 
 module.exports = chunk;

@@ -15,7 +15,7 @@ function chunk(array, size) {
 
   // use for ... of to iterate through each element in the original array
     for(let element of array ){
-      
+
       // find last element in chunked
       const last = chunked[chunked.length - 1]
 
@@ -27,7 +27,7 @@ function chunk(array, size) {
 
       // otherwise, add the element to the current chunk
         } else {
-
+          last.push(element)
         }
     }
 

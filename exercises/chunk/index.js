@@ -9,10 +9,30 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
-  // needs a loop to advance through array
-  // slice the array from 0 to size
-  // return an array of arrays
+  // create empty array to hold chunks called 'chunked'
+  const chunked = []
 
+
+  // use for ... of to iterate through each element in the original array
+    for(let element of array ){
+      
+      // find last element in chunked
+      const last = chunked[chunked.length - 1]
+
+      // if last element doesn't exist (bc there's nothing in that chunk yet) or the last element is equal to the size of the chunk
+        if (!last || last.length === size) {
+
+          // push a new chunk into 'chunked' with the current element
+          chunked.push([element])
+
+      // otherwise, add the element to the current chunk
+        } else {
+
+        }
+    }
+
+  // return an array of arrays
+    return chunked
 }
 
 module.exports = chunk;

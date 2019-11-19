@@ -9,24 +9,19 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-// Save 'processor' to a variable so I can just call it on each string instead of writing it twice.
+// Save 'processor' to a variable so I can just call it on each string instead of writing it twice?
 
-    // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
-    // turn stringA into an object
-    // loop thru stringA with a for...in loop
-      // count number of times each character appears in the string
-        // if the character already exists, add one to the counter (+= 1 or ++?)
-        // otherwise assign the character to a value of 0
-    // don't forget to return a value
 
-    // use RegX to strip out punctuation and spaces, included upper and lower case in stringB
-    // loop thru stringA with a for...in loop
-      // count number of times each character appears in the string
-        // if the character already exists, add one to the counter (+= 1 or ++?)
-        // otherwise assign the character to a value of 0
-    // don't forget to return a value
+    //write this as a function and pass in a generic str
+      // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
+      // create an empty object to add letters to
+      // create a counter value and start it at 0
+      // use a for...of to iterate through each character in the string array
+          // if it already exists, update the key value by one each time it appears
+          // otherwise, create a key and set the value to 0
+      // check if I need to return something here or if the for takes care of that (pretty sure it does)
 
-    // return the direct comparison of strings (true or false)
+    // return JSON.stringify(object name) === JSON.stringify(second object name)
 }
 
 module.exports = anagrams;

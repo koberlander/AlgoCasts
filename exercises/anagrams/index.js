@@ -12,7 +12,7 @@ function anagrams(stringA, stringB) {
 // Save 'processor' to a variable so I can just call it on each string instead of writing it twice?
 
 
-    //write this as a function and pass in a generic str
+    //write this as a function called letterCounterFunc and pass in a generic str
       // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
       // create an empty object to add letters to
       // create a counter value and start it at 0

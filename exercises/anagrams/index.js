@@ -12,16 +12,34 @@ function anagrams(stringA, stringB) {
 // Save 'processor' to a variable so I can just call it on each string instead of writing it twice?
 
 
-    //write this as a function called letterCounterFunc and pass in a generic str
-      // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
-      // create an empty object to add letters to
-      // create a counter value and start it at 0
-      // use a for...of to iterate through each character in the string array
-          // if it already exists, update the key value by one each time it appears
-          // otherwise, create a key and set the value to 0
-      // check if I need to return something here or if the for takes care of that (pretty sure it does)
+    //write function called letterCounterFunc and pass in a generic str
 
-    // return JSON.stringify(object name) === JSON.stringify(second object name)
+    function letterCounterFunc(str){
+      // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
+      let regXdString = str.replace(/[^\w]/g, "")
+
+      // create an empty object to add letters to
+      let regXdObject = {}
+
+      // create a counter value and start it at 0
+      let count = 0
+
+      // use a for...of to iterate through each character in the string array
+      for (let char of regXdString) {
+
+        // if it already exists, update the key value by one each time it appears
+        if (regXdObject[char]) {
+          regXdObject[char]++
+        } else {
+          // otherwise, create a key and set the value to 0
+          regXdObject[char] = 0
+
+        }
+      }
+
+    }
+
+    return JSON.stringify(letterCounterFunc(stringA)) === JSON.stringify(letterCounterFunc)
 }
 
 module.exports = anagrams;

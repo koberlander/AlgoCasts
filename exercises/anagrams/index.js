@@ -9,37 +9,36 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-// Save 'processor' to a variable so I can just call it on each string instead of writing it twice?
-
 
     //write function called letterCounterFunc and pass in a generic str
 
-    function letterCounterFunc(str){
-      // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
-      let regXdString = str.replace(/[^\w]/g, "")
 
-      // create an empty object to add letters to
-      let regXdObject = {}
+    return letterCounterFunc(stringA) === letterCounterFunc(stringB)
 
-      // create a counter value and start it at 0
-      let count = 0
+}
 
-      // use a for...of to iterate through each character in the string array
-      for (let char of regXdString) {
+function letterCounterFunc(str){
+ // use RegX to strip out punctuation and spaces, include upper and lower case in stringA
+ let regXdString = str.replace(/[^\w]/g, "").toLowerCase()
 
-        // if it already exists, update the key value by one each time it appears
-        if (regXdObject[char]) {
-          regXdObject[char]++
-        } else {
-          // otherwise, create a key and set the value to 0
-          regXdObject[char] = 0
+ // create an empty object to add letters to
+ let regXdObject = {}
+ // console.log('regXdObject: ', regXdObject);
+ // use a for...of to iterate through each character in the string array
+ for (let char of regXdString) {
 
-        }
-      }
+   // if it already exists, update the key value by one each time it appears
+   if (regXdObject[char]) {
+     regXdObject[char]++
 
-    }
+   } else {
+     // otherwise, create a key and set the value to 0
+     regXdObject[char] = 1
 
-    return JSON.stringify(letterCounterFunc(stringA)) === JSON.stringify(letterCounterFunc)
+   }
+
+ }
+ return regXdObject
 }
 
 module.exports = anagrams;

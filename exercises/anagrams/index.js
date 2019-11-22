@@ -19,7 +19,7 @@ function anagrams(stringA, stringB) {
     return false
   }
 
-  // after determining if they have the same number of keys, we want to do a direct comparison to weed out differnt numbers. For every key/character in my aRegXdObject, check to see if the corresponding key in bRegXdObject is equal (does it have the same value for each key?)
+  // after determining if they have the same number of keys, we want to do a direct comparison to weed out differnt key/value pairs (differing numbers of the same character). For every key/character in my aRegXdObject, check to see if the corresponding key in bRegXdObject is equal (does it have the same value for each key?)
   for (let character in aRegXdObject) {
     if (aRegXdObject[character] !== bRegXdObject[character]) {
       return false

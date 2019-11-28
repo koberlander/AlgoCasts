@@ -17,6 +17,10 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  // use while (x<= n) {
+    // how to handle spaces
+  // }
+}
 
 module.exports = steps;

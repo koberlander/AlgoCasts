@@ -18,8 +18,21 @@
 //       '####'
 
 function steps(n) {
-  // use while (x<= n) {
-    // how to handle spaces
+  // use while (x<= n) ?{
+    let stepsString = []
+
+    for (character of stepsString) {
+      if (stepsString.length <= n) {
+        //log character + stepsString
+        // how to calculate spaces?
+      } else {
+
+      }
+    }
+    // how to print appropriate number of # in a str
+
+
+
   // }
 }
 

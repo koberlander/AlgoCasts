@@ -17,23 +17,44 @@
 //       '### '
 //       '####'
 
+// VIEW EACH SHAPE AS A SERIES OF ROWS/COLUMNS
 function steps(n) {
-  // use while (x<= n) ?{
-    let stepsString = []
+  // From 0 to n (iterate through rows)
+  for (let row = 0; row < n; row++) {
+    let stair = ''
 
-    for (character of stepsString) {
-      if (stepsString.length <= n) {
-        //log character + stepsString
-        // how to calculate spaces?
-      } else {
+    // From 0 to n (iterate through columns)
+    for (let column = 0; column < n; column++) {
+      // if row > column, add a # to stair (don't forget to use += in a for loop like this)
+        if (column <= row) {
+          stair += '#'
+        } else {
+          stair += ' '
+        }
 
-      }
     }
-    // how to print appropriate number of # in a str
 
-
-
-  // }
+    console.log(stair);
+  }
 }
 
 module.exports = steps;
+// MY FIRST STAB
+// function steps(n) {
+//   // use while (x<= n) ?{
+//     let stepsString = []
+//
+//     for (character of stepsString) {
+//       if (stepsString.length <= n) {
+//         //log character + stepsString
+//         // how to calculate spaces?
+//       } else {
+//         ' ' + stepsString
+//       }
+//     }
+//     // how to print appropriate number of # in a str
+//
+//
+//
+//   // }
+// }

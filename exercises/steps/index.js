@@ -33,7 +33,7 @@ function steps(n) {
         }
 
     }
-
+    // make sure to log inside the initial for loop
     console.log(stair);
   }
 }

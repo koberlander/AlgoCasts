@@ -15,32 +15,29 @@
 //       '#####'
 
 function pyramid(n) {
+  const midpoint = Math.floor((2 * n - 1) / 2)
+
   // From 0 to n (iterate through rows)
   for (let row = 0; row < n; row++) {
     let level = ''
     // From 0 to ??? (iterate through columns)
     // the difference between rows/columns increases like so: 2 rows, 3 columns... 3 rows, 5 columns... 4 rows, 7 columns - fibonacci sequence?
 
-          // use above to figure out how many spaces to add before #... is there a way to mirror what's before and after center item?
+      for (let column = 0; column < 2 * n - 1; column++) {
 
-      for (let column = 0; column < level.length; column++) {
         // if should have a #, add a # to level string
-        if (condition) {
-
+        if (midpoint - row <= column && midpoint + row >= column) {
+          level += '#'
         }
         // otherwise add a space to level string
         else {
-
+          level += ' '
         }
       }
-
-
-
 
         // log my pyramid string inside the initial for loop
         console.log(level);
   }
-
 
 }
 

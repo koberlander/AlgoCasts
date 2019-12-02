@@ -17,29 +17,43 @@
 //       '### '
 //       '####'
 
-// VIEW EACH SHAPE AS A SERIES OF ROWS/COLUMNS
-function steps(n) {
-  // From 0 to n (iterate through rows)
-  for (let row = 0; row < n; row++) {
-    let stair = ''
+// RECURSIVE SOLUTION TO PROBLEM
+function steps(n, row = 0, stair = '') {
+  if (n === row) {
+    return
+  }
 
-    // From 0 to n (iterate through columns)
-    for (let column = 0; column < n; column++) {
-      // if row > column, add a # to stair (don't forget to use += in a for loop like this)
-        if (column <= row) {
-          stair += '#'
-        } else {
-          stair += ' '
-        }
+    if (n === stair.length) {
+      console.log(stair);
+    } else {
 
     }
-    // make sure to log inside the initial for loop
-    console.log(stair);
-  }
 }
 
 module.exports = steps;
-// MY FIRST STAB
+
+// // VIEW EACH SHAPE AS A SERIES OF ROWS/COLUMNS
+// function steps(n) {
+//   // From 0 to n (iterate through rows)
+//   for (let row = 0; row < n; row++) {
+//     let stair = ''
+//
+//     // From 0 to n (iterate through columns)
+//     for (let column = 0; column < n; column++) {
+//       // if row > column, add a # to stair (don't forget to use += in a for loop like this)
+//         if (column <= row) {
+//           stair += '#'
+//         } else {
+//           stair += ' '
+//         }
+//
+//     }
+//     // make sure to log inside the initial for loop
+//     console.log(stair);
+//   }
+// }
+
+// MY FIRST STAB AT RECURSION
 // function steps(n) {
 //   // use while (x<= n) ?{
 //     let stepsString = []

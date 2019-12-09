@@ -16,7 +16,7 @@ function vowels(str) {
   for (letter in array) {
 
     if (array.includes(/[AEIOUaeiou]/g)) {
-      vowelNum + 1
+      vowelNum += 1
     }
     // doublecheck this is in correct placement
     return vowelNum

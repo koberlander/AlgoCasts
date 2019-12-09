@@ -29,8 +29,10 @@ function pyramid(n, row = 0, level = '') {
 
   // create a midpoint variable that equals the center-most value of the array
   const midpoint = Math.floor((n * 2 -1) / 2 )
-
+  
+  // create a variable to hold this iteration's # or ' '
   let add
+
   // add the proper character to level
   if (midpoint - row <= level.length && midpoint + row >= level.length) {
     add = '#'

@@ -7,6 +7,22 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+  let vowelNum = 0
+
+  // convert str to array
+  let array = str.split('')
+
+  for (letter in array) {
+
+    if (array.includes(/[AEIOUaeiou]/g)) {
+      vowelNum + 1
+    }
+    // doublecheck this is in correct placement
+    return vowelNum
+  }
+
+
+}
 
 module.exports = vowels;

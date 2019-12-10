@@ -8,19 +8,24 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-  let vowelNum = 0
 
-  // convert str to array
-  let array = str.split('')
 
-  for (letter in array) {
+  // convert str to array to use with includes()
+  const array = str.split('')
 
+  // create a counter variable to increment for each vowel
+  let counter = 0
+
+  for (let letter of array) {
+
+    // if letter === AEIOU or aeiou increase counter
     if (array.includes(/[AEIOUaeiou]/g)) {
-      vowelNum += 1
+      counter += 1
+      console.log('counter: ', counter);
     }
-    // doublecheck this is in correct placement
-    return vowelNum
+
   }
+  return counter
 
 
 }

@@ -17,12 +17,17 @@
 
 function matrix(n) {
   // create an empty array of arrays called results
+  const results = []
+
+  for (let i = 0; i < n; i++) {
+    results.push([])
+  }
 
   // create a counter variable starting at 1
 
   // as long as (start column <= end column) AND (start row <= end column)
 
-    // loop deom start column to end column
+    // loop from start column to end column
 
       // At results[start_row][i] assign counter variable
 
@@ -39,7 +44,7 @@ function matrix(n) {
   // Decrement end row
 
   // ...repeat for other two sides
-  
+
 }
 
 module.exports = matrix;

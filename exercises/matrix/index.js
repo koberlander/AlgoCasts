@@ -34,14 +34,21 @@ function matrix(n) {
   let endRow = n - 1
 
   // as long as (start column <= end column) AND (start row <= end column)
+   while (startColumn <= endColumn && startRow <= endRow) {
 
     // loop from start column to end column
-
+    // TOP ROW
+     for (let i = startColumn; i < endColumn; i++) {
       // At results[start_row][i] assign counter variable
+        results[startRow][i] = counter
 
       // increment counter
+        counter++
+    }
 
-  // increment start row
+
+
+    // increment start row
 
   // Loop from start row to end row
 
@@ -53,6 +60,7 @@ function matrix(n) {
 
   // ...repeat for other two sides
 
+  }
 }
 
 module.exports = matrix;

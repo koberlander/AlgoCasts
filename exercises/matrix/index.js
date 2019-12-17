@@ -24,6 +24,14 @@ function matrix(n) {
   }
 
   // create a counter variable starting at 1
+  let counter = 1
+
+  // create variables for start/end row and start/end column
+  let startColumn = 0
+  let endColumn = n - 1
+
+  let startRow = 0
+  let endRow = n - 1
 
   // as long as (start column <= end column) AND (start row <= end column)
 

@@ -45,12 +45,15 @@ function matrix(n) {
       // increment counter
         counter++
     }
-
-
-
     // increment start row
+     startRow++
 
   // Loop from start row to end row
+  // RIGHT COLUMN
+   for (let i = startRow; i <= endRow; i++) {
+     results[i][startColumn] = counter 
+     counter ++
+   }
 
     // At results[i][end_column] assign counter variable
 

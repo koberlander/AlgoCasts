@@ -38,7 +38,7 @@ function matrix(n) {
 
     // loop from start column to end column
     // TOP ROW
-     for (let i = startColumn; i < endColumn; i++) {
+     for (let i = startColumn; i <= endColumn; i++) {
       // At results[start_row][i] assign counter variable
         results[startRow][i] = counter
 
@@ -52,10 +52,10 @@ function matrix(n) {
   // RIGHT COLUMN
    for (let i = startRow; i <= endRow; i++) {
     // At results[i][end_column] assign counter variable
-     results[i][startColumn] = counter
+     results[i][endColumn] = counter
 
      // increment counter
-      counter ++
+      counter++
    }
 
    // Decrement end column
@@ -68,9 +68,17 @@ function matrix(n) {
      counter ++
    }
    // decrement end row
-   endRow--
+    endRow--
 
+   // start column
+    for (let i = endRow; i >= startRow; i--) {
+      results[i][startColumn] = counter
+      counter++
+    }
+    startColumn++
   }
+
+  return results
 }
 
 module.exports = matrix;

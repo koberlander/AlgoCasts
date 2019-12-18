@@ -61,7 +61,8 @@ function matrix(n) {
    // Decrement end column
     endColumn--
 
-  // Bottom row
+  // BOTTOM ROW
+  // Can assign items to an array directly inside these for-loops, no need to push!
    for (let i = endColumn; i >= startColumn; i--) {
      results[endRow][i] = counter
 
@@ -70,7 +71,7 @@ function matrix(n) {
    // decrement end row
     endRow--
 
-   // start column
+   // START COLUMN
     for (let i = endRow; i >= startRow; i--) {
       results[i][startColumn] = counter
       counter++

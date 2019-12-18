@@ -51,17 +51,24 @@ function matrix(n) {
   // Loop from start row to end row
   // RIGHT COLUMN
    for (let i = startRow; i <= endRow; i++) {
-     results[i][startColumn] = counter 
-     counter ++
+    // At results[i][end_column] assign counter variable
+     results[i][startColumn] = counter
+
+     // increment counter
+      counter ++
    }
 
-    // At results[i][end_column] assign counter variable
+   // Decrement end column
+    endColumn--
 
-    // increment counter
+  // Bottom row
+   for (let i = endColumn; i >= startColumn; i--) {
+     results[endRow][i] = counter
 
-  // Decrement end row
-
-  // ...repeat for other two sides
+     counter ++
+   }
+   // decrement end row
+   endRow--
 
   }
 }

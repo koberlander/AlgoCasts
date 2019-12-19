@@ -15,6 +15,7 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
+// DO YOURSELF A FAVOR AND DRAW A DIAGRAM & REFERENCE THE PSEUDO CODE
 function matrix(n) {
   const results = []
 
@@ -35,7 +36,7 @@ function matrix(n) {
 
     // FIRST ROW
     // loop from startColumn to endColumn (will need to research the notation to assign the counter here)
-    for (let i = startColumn; i < endColumn; i++) {
+    for (let i = startColumn; i <= endColumn; i++) {
       results[startRow][i] = counter
 
       counter++
@@ -46,30 +47,39 @@ function matrix(n) {
 
     // LAST COLUMN
     // loop from startRow to endRow
-    for (let i = 0; i < endRow; i++) {
+    for (let i = startRow; i <= endRow; i++) {
       // at results[i][endColumn] assign counter
       results[i][endColumn] = counter
 
       counter++
     }
     //decrement endRow
-    endRow--
+    endColumn--
 
     // BOTTOM ROW
     // loop from endColumn to startColumn
-    for (let i = endColumn; i <= startColumn; i--) {
-      results[endColumn][i] = counter
+    for (let i = endColumn; i >= startColumn; i--) {
+      results[endRow][i] = counter
 
       counter++
     }
     // decrement startRow
-    startRow--
+    endRow--
 
-    // FIRST COLUMN
+    // START COLUMN
+    // loop from startColumn to n
+    for (let i = endRow; i >= startRow; i--) {
+      results[i][startColumn] = counter
 
-    // return the array of arrays!
-    // return results
+      counter++
+    }
+
+    // increment startColumn
+    startColumn++
+
   }
+  // return the array of arrays!
+  return results
 
 }
 

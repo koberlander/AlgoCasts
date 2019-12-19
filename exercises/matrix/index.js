@@ -34,9 +34,9 @@ function matrix(n) {
   while (startColumn <= endColumn && startRow <= endRow) {
 
     // FIRST ROW
-    // loop from startColumn to endColumn
+    // loop from startColumn to endColumn (will need to research the notation to assign the counter here)
     for (let i = startColumn; i < endColumn; i++) {
-      results[startColumn][i] = counter
+      results[startRow][i] = counter
 
       counter++
     }
@@ -46,9 +46,29 @@ function matrix(n) {
 
     // LAST COLUMN
     // loop from startRow to endRow
-    for (let i = 0; i < array.length; i++) {
-      array[i]
+    for (let i = 0; i < endRow; i++) {
+      // at results[i][endColumn] assign counter
+      results[i][endColumn] = counter
+
+      counter++
     }
+    //decrement endRow
+    endRow--
+
+    // BOTTOM ROW
+    // loop from endColumn to startColumn
+    for (let i = endColumn; i <= startColumn; i--) {
+      results[endColumn][i] = counter
+
+      counter++
+    }
+    // decrement startRow
+    startRow--
+
+    // FIRST COLUMN
+
+    // return the array of arrays!
+    // return results
   }
 
 }

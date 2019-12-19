@@ -16,70 +16,73 @@
 //     [10,  9,  8, 7]]
 
 function matrix(n) {
-  // create an empty array of arrays called results
-  const results = []
-
-  for (let i = 0; i < n; i++) {
-    results.push([])
-  }
-
-  // create a counter variable starting at 1
-  let counter = 1
-
-  // create variables for start/end row and start/end column
-  let startColumn = 0
-  let endColumn = n - 1
-
-  let startRow = 0
-  let endRow = n - 1
-
-  // as long as (start column <= end column) AND (start row <= end column)
-   while (startColumn <= endColumn && startRow <= endRow) {
-
-    // loop from start column to end column
-    // TOP ROW
-     for (let i = startColumn; i <= endColumn; i++) {
-      // At results[start_row][i] assign counter variable
-        results[startRow][i] = counter
-
-      // increment counter
-        counter++
-    }
-    // increment start row
-     startRow++
-
-  // Loop from start row to end row
-  // RIGHT COLUMN
-   for (let i = startRow; i <= endRow; i++) {
-    // At results[i][end_column] assign counter variable
-     results[i][endColumn] = counter
-
-     // increment counter
-      counter++
-   }
-
-   // Decrement end column
-    endColumn--
-
-  // BOTTOM ROW
-  // Can assign items to an array directly inside these for-loops, no need to push!
-   for (let i = endColumn; i >= startColumn; i--) {
-     results[endRow][i] = counter
-
-     counter ++
-   }
-   // decrement end row
-    endRow--
-
-   // START COLUMN
-    for (let i = endRow; i >= startRow; i--) {
-      results[i][startColumn] = counter
-      counter++
-    }
-    startColumn++
-  }
-
-  return results
 }
 
 module.exports = matrix;
+
+// function matrix(n) {
+//   // create an empty array of arrays called results
+//   const results = []
+//
+//   for (let i = 0; i < n; i++) {
+//     results.push([])
+//   }
+//
+//   // create a counter variable starting at 1
+//   let counter = 1
+//
+//   // create variables for start/end row and start/end column
+//   let startColumn = 0
+//   let endColumn = n - 1
+//
+//   let startRow = 0
+//   let endRow = n - 1
+//
+//   // as long as (start column <= end column) AND (start row <= end column)
+//    while (startColumn <= endColumn && startRow <= endRow) {
+//
+//     // loop from start column to end column
+//     // TOP ROW
+//      for (let i = startColumn; i <= endColumn; i++) {
+//       // At results[start_row][i] assign counter variable
+//         results[startRow][i] = counter
+//
+//       // increment counter
+//         counter++
+//     }
+//     // increment start row
+//      startRow++
+//
+//   // Loop from start row to end row
+//   // RIGHT COLUMN
+//    for (let i = startRow; i <= endRow; i++) {
+//     // At results[i][end_column] assign counter variable
+//      results[i][endColumn] = counter
+//
+//      // increment counter
+//       counter++
+//    }
+//
+//    // Decrement end column
+//     endColumn--
+//
+//   // BOTTOM ROW
+//   // Can assign items to an array directly inside these for-loops, no need to use .push!
+//    for (let i = endColumn; i >= startColumn; i--) {
+//      results[endRow][i] = counter
+//
+//      counter ++
+//    }
+//    // decrement end row
+//     endRow--
+//
+//    // START COLUMN
+//     for (let i = endRow; i >= startRow; i--) {
+//       results[i][startColumn] = counter
+//       counter++
+//     }
+//     startColumn++
+//   }
+//
+//   return results
+// }

@@ -39,7 +39,7 @@ function steps(n, row = 0, stair = '') {
 }
 
 module.exports = steps;
-
+// AS 'N' INCREASED BY ONE, WE HAVE TO DO WAY WAY MORE STUFF, OR (N*N) THINGS TOTAL. THIS WOULD BE N^2, OR QUADRATIC RUNTIME.
 // // VIEW EACH SHAPE AS A SERIES OF ROWS/COLUMNS
 // function steps(n) {
 //   // From 0 to n (iterate through rows)

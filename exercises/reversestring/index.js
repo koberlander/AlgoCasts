@@ -22,6 +22,7 @@ function reverse(str) {
 }
 
 module.exports = reverse;
+// LINEAR RUNTIME
 // USES FOR...LET
 // function reverse(str) {
 // // create an empty string called 'reversed'

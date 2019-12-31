@@ -1,11 +1,6 @@
 # Runtime Chart
 
-Type | Equation | Description
----- | -------- | -----------
-Constant Time | 1 | The algorithm/operation/etc takes the same amount of time no matter how many elements.
-
-2. Logarithmic Time - *log(n)* - You have this when doubling the amount of elements you have does not double the amount of work.
-
-3. Linear Time - *n* - Iterating through all elements in a collection of data. If you see a loop spanning from '0' to 'array.length', you probably have 'n' or linear time.
-
-4. Quasilinear Time - *n
+Constant Time - *1* - The algorithm/operation/etc takes the same amount of time no matter how many elements
+Logarithmic Time - *log(n)* - You have this when doubling the amount of elements you have does not double the amount of work
+Linear Time - *n* - Iterating through all elements in a collection of data. If you see a loop spanning from '0' to 'array.length', you probably have 'n' or linear time
+Quasilinear Time - *n*

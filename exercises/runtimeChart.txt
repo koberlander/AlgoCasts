@@ -1,6 +1,11 @@
-# Runtime Chart
+1. Constant Time - 1 - The algorithm/operation/etc takes the same amount of time no matter how many elements
 
-Constant Time - *1* - The algorithm/operation/etc takes the same amount of time no matter how many elements
-Logarithmic Time - *log(n)* - You have this when doubling the amount of elements you have does not double the amount of work
-Linear Time - *n* - Iterating through all elements in a collection of data. If you see a loop spanning from '0' to 'array.length', you probably have 'n' or linear time
-Quasilinear Time - *n*
+2. Logarithmic Time - log(n) - You have this when doubling the amount of elements you have does not double the amount of work
+
+3. Linear Time - n - Iterating through all elements in a collection of data. If you see a loop spanning from '0' to 'array.length', you probably have 'n' or linear time
+
+4. Quasilinear Time - n * log(n) - You have this if doubling the number of elements you are iterating over doesn't double the amount of work. Always assume that any sorting operation is n*log(n)
+
+5. Quadratic Time - n ^ 2 - Every element in a collection has to be compared to ever other element. 'The handshake problem'
+
+6. Exponential Time - 2 ^ n - If you add a *single* element to a collection, the processing power required doubles.

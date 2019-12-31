@@ -1,8 +1,8 @@
 # Runtime Chart
 
-Type | Equation | Description |
-| --- | --- | --- |
-| Constant Time | 1 | The algorithm/operation/etc takes the same amount of time no matter how many elements. |
+Type | Equation | Description
+---- | -------- | -----------
+Constant Time | 1 | The algorithm/operation/etc takes the same amount of time no matter how many elements.
 
 2. Logarithmic Time - *log(n)* - You have this when doubling the amount of elements you have does not double the amount of work.
 
